@@ -1,18 +1,19 @@
 import { Card, Container, Layout, Loader, Title } from "@Components/index";
 import { useEffect, useState } from "react";
-// import { fetchCar } from "@helpers/index";
+import { fetchCar } from "@helpers/index";
 import { IoIosArrowUp } from "react-icons/io";
 
 const Home = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [cars, setCars] = useState([]);
+
   useEffect(() => {
     const loaderCars = async () => {
       setIsLoading(true);
-      // const request = await fetchCar();
-      // if (request) {
-      //   setCars(request);
-      // }
+      const request = await fetchCar();
+      if (request) {
+        setCars(request);
+      }
       setIsLoading(false);
     };
     loaderCars();

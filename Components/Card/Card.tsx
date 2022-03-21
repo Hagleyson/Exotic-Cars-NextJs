@@ -1,5 +1,5 @@
 import { FC, useState } from "react";
-
+import { useRouter } from "next/router";
 import { Container, Title } from "..";
 import { CardStyles } from "./CardStyles";
 
@@ -7,12 +7,13 @@ import { carTypes } from "@helpers/index";
 
 const Card: FC<carTypes> = (props) => {
   const [selectedImg, setSelectedImg] = useState(0);
+  const route = useRouter();
 
   const toggleImage = (idx: number) => {
     setSelectedImg(idx);
   };
   const redirect = (id: number) => {
-    // navigate(`/details/${id}`);
+    route.push(`/Details/${id}`);
   };
   return (
     <CardStyles>
