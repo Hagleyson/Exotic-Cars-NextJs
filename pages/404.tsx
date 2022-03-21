@@ -1,12 +1,13 @@
 import { Button, Container, Title } from "@Components/index";
 import { BsArrowLeft } from "react-icons/bs";
-
+import { useRouter } from "next/router";
 const NotFound = () => {
+  const route = useRouter();
   return (
     <Container type="notFound">
       <Title>404 Page Not Found</Title>
       <Button
-        handleClick={() => console.log("ok")}
+        handleClick={() => route.push("/")}
         typeStyle="carousel"
         secondary
       >

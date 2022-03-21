@@ -5,12 +5,12 @@
       "name": "Alfa",
       "model": "Romeo",
       "price": "90000",
-      "logo": "https://i.ibb.co/Rj8sS7X/alfa-Romeno-removebg-preview.png",
+      "logo": "/image/alfaRomeo/logo.png",
       "imgs": [
         {
           "id": "01",
           "color": "yellow",
-          "img": "https://i.ibb.co/bKfgdwW/Alfa-Romeo.png",
+          "img": "/image/alfaRomeo/01.png",
           "label": "Alfa-Romeo"
         }
       ]
@@ -20,12 +20,12 @@
       "name": "Bentley",
       "model": "Continental GT",
       "price": "90000",
-      "logo": "https://i.ibb.co/71G7B4D/bentley-removebg-preview.png",
+      "logo": "/image/bentleyContinental/logo.png",
       "imgs": [
         {
           "id": "01",
           "color": "Blue",
-          "img": "https://i.ibb.co/gMCG8rs/Bentley-Continental-GT.png",
+          "img": "/image/bentleyContinental/01.png",
           "label": "Bentley Continental GT"
         }
       ]
@@ -35,24 +35,25 @@
       "name": "Ferrari",
       "model": "California",
       "price": "90000",
-      "logo": "https://i.ibb.co/41N39DR/logo-Ferrari.png",
+      "logo": "/image/ferrariCalifornia/logo.png",
       "imgs": [
         {
-          "id": "02",
-          "color": "Red",
-          "img": "https://i.ibb.co/F54NvVm/Ferrari-California.png",
+          "id": "03",
+          "color": "Silver",
+          "img": "/image/ferrariCalifornia/03.png",
           "label": "Ferrari-California"
         },
         {
           "id": "01",
-          "color": "Yellow",
-          "img": "https://i.ibb.co/2d83CZQ/Ferrari-California2.png",
+          "color": "Red",
+          "img": "/image/ferrariCalifornia/02.png",
           "label": "Ferrari-California"
         },
         {
-          "id": "03",
-          "color": "Silver",
-          "img": "https://i.ibb.co/ckZWWpz/Ferrari-California3.png",
+          "id": "02",
+          "color": "Yellow",
+
+          "img": "/image/ferrariCalifornia/01.png",
           "label": "Ferrari-California"
         }
       ]
@@ -62,12 +63,12 @@
       "name": "BMW",
       "model": "Competition",
       "price": "90000",
-      "logo": "https://i.ibb.co/vVYBfsp/bmw-removebg-preview.png",
+      "logo": "/image/bmw/logo.png",
       "imgs": [
         {
           "id": "01",
           "color": "White",
-          "img": "https://i.ibb.co/XFLz1LH/bmw-M1-Competition.png",
+          "img": "/image/bmw/01.png",
           "label": "BMW Competition"
         }
       ]
@@ -77,12 +78,12 @@
       "name": "Veyron",
       "model": "Spyder",
       "price": "90000",
-      "logo": "https://i.ibb.co/1qPT77n/veyron-removebg-preview.png",
+      "logo": "/image/bugatti/logo.png",
       "imgs": [
         {
           "id": "01",
           "color": "Blue",
-          "img": "https://i.ibb.co/RPqqX9p/Bugatti-Veyron-Spyder.png",
+          "img": "/image/bugatti/01.png",
           "label": "Veyron-Spyder"
         }
       ]
@@ -92,12 +93,12 @@
       "name": "Chevrolet",
       "model": "Covertt",
       "price": "90000",
-      "logo": "https://i.ibb.co/P16QchS/Chevrolet-Logo.png",
+      "logo": "/image/chevroletCorvet/logo.png",
       "imgs": [
         {
           "id": "01",
           "color": "White",
-          "img": "https://i.ibb.co/vVfdfVP/Chevrolet-Corvett.png",
+          "img": "/image/chevroletCorvet/01.png",
           "label": "Chevrolet-Covertt"
         }
       ]
@@ -107,12 +108,12 @@
       "name": "Mclaren",
       "model": "P1 GTR",
       "price": "90000",
-      "logo": "https://i.ibb.co/n6Dvqvz/mclaren-removebg-preview.png",
+      "logo": "/image/mclaren/logo.png",
       "imgs": [
         {
           "id": "01",
           "color": "Blue",
-          "img": "https://i.ibb.co/BTqT0XD/Mclaren-P1-GTR.png",
+          "img": "/image/mclaren/01.png",
           "label": "Mclaren-P1-GTR"
         }
       ]
@@ -122,12 +123,12 @@
       "name": "Mercedes bens",
       "model": "0090",
       "price": "90000",
-      "logo": "https://i.ibb.co/jVbW43d/mercedes-removebg-preview.png",
+      "logo": "/image/mercedes-benz/logo.png",
       "imgs": [
         {
           "id": "01",
           "color": "Blue",
-          "img": "https://i.ibb.co/zP8KSXP/Mercedes-bens.png",
+          "img": "/image/mercedes-benz/01.png",
           "label": "Mercedes bens"
         }
       ]
@@ -137,24 +138,18 @@
       "name": "Poshe",
       "model": "911 turbo",
       "price": "90000",
-      "logo": "https://i.ibb.co/bN0yZjT/porsche.png",
+      "logo": "/image/poshe911s/logo.png",
       "imgs": [
         {
           "id": "02",
           "color": "White",
-          "img": "https://i.ibb.co/zSCc3Kp/poshe911-Turbos.png",
-          "label": "Mercedes bens"
+          "img": "/image/poshe911s/01.png",
+          "label": "porshe"
         },
         {
           "id": "01",
           "color": "Orange",
-          "img": "https://i.ibb.co/zbBnJJc/poshe911turbo.png",
-          "label": "Mercedes bens"
-        },
-        {
-          "id": "03",
-          "color": "Silver",
-          "img": "https://i.ibb.co/D8F08mC/poshe911turbo-S.png",
+          "img": "/image/poshe911s/02.png",
           "label": "Mercedes bens"
         }
       ]
@@ -164,34 +159,13 @@
       "name": "Rolls-Royce",
       "model": "0520",
       "price": "90000",
-      "logo": "https://i.ibb.co/tz18s5Y/rr-removebg-preview.png",
+      "logo": "/image/rollsRoyce/logo.png",
       "imgs": [
         {
           "id": "01",
           "color": "Red",
-          "img": "https://i.ibb.co/fCCHQNw/Rolls-Royce.png",
+          "img": "/image/rollsRoyce/01.png",
           "label": "Rolls-Royce"
-        }
-      ]
-    },
-    {
-      "id": "12",
-      "name": "Chevrolet",
-      "model": "Impala 67",
-      "price": "40000",
-      "logo": "https://i.ibb.co/P16QchS/Chevrolet-Logo.png",
-      "imgs": [
-        {
-          "id": "02",
-          "color": "Black",
-          "img": "https://i.ibb.co/WpD7Bdd/clipart4287038.png",
-          "label": "chevrolete-impala"
-        },
-        {
-          "id": "01",
-          "color": "White",
-          "img": "https://i.ibb.co/hfKG26W/341-3411620-chevy-impala-1967-png-transparent-png-removebg-preview.png",
-          "label": "chevrolete-impala"
         }
       ]
     },
@@ -200,12 +174,12 @@
       "name": "Chevrolet",
       "model": "Impala 67",
       "price": "40000",
-      "logo": "https://i.ibb.co/P16QchS/Chevrolet-Logo.png",
+      "logo": "/image/chevroletImpala/logo.png",
       "imgs": [
         {
           "id": "01",
           "color": "Black",
-          "img": "https://i.ibb.co/mN90ZmT/341-3411620-chevy-impala-1967-png-transparent-png-removebg-preview.png",
+          "img": "/image/chevroletImpala/01.png",
           "label": "chevrolete-impala"
         }
       ]
@@ -215,25 +189,28 @@
       "name": "Nissan",
       "model": "Skyline",
       "price": "50000",
-      "logo": "https://i.ibb.co/SNSJHVc/nissan-removebg-preview.png",
+      "logo": "/image/nissanSkyline/logo.png",
       "imgs": [
         {
           "id": "02",
-          "color": "Silver",
-          "img": "https://i.ibb.co/6BpmzHv/01-removebg-preview-1.png",
+          "color": "Black",
+          "img": "/image/nissanSkyline/01.png",
           "label": "nissan skyline gtr r34"
-        },
+        }
+      ]
+    },
+    {
+      "id": "15",
+      "name": "Poshe",
+      "model": "911 gt3",
+      "price": "90000",
+      "logo": "/image/porshe911gt3/logo.png",
+      "imgs": [
         {
-          "id": "01",
-          "color": "Silver",
-          "img": "https://i.ibb.co/58S5D5j/02-removebg-preview.png",
-          "label": "nissan skyline gtr r34"
-        },
-        {
-          "id": "03",
-          "color": "Blue",
-          "img": "https://i.ibb.co/NW3fVjs/03.png",
-          "label": "nissan skyline gtr r34"
+          "id": "02",
+          "color": "White",
+          "img": "/image/porshe911gt3/01.png",
+          "label": "Mercedes bens"
         }
       ]
     }

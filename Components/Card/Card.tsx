@@ -7,13 +7,13 @@ import { carTypes } from "@helpers/index";
 
 const Card: FC<carTypes> = (props) => {
   const [selectedImg, setSelectedImg] = useState(0);
-  const route = useRouter();
+  const { push } = useRouter();
 
   const toggleImage = (idx: number) => {
     setSelectedImg(idx);
   };
   const redirect = (id: number) => {
-    route.push(`/Details/${id}`);
+    push(`${id}`);
   };
   return (
     <CardStyles>
