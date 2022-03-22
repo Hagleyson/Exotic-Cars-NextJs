@@ -61,7 +61,7 @@ export async function getStaticProps() {
       erro:
         listCar && listCar.hasError ? listCar : { hasError: false, msg: null },
     },
-    revalidate: 10,
+    revalidate: 120,
   };
 }
 export default Home;

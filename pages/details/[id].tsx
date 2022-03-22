@@ -8,20 +8,20 @@ import {
   Loader,
   Title,
 } from "@Components/index";
+
 import { carTypes, fetchCar, imgType } from "@helpers/index";
 import { BsArrowRight, BsArrowLeft } from "react-icons/bs";
 import { toast } from "react-toastify";
+import { carType } from "@helpers/types/carType";
 
-const Details = () => {
+const Details = (props: { selectedCar: carType }) => {
   const route = useRouter();
+
+  const { selectedCar } = props;
 
   const [itemDetais, setItemDetais] = useState<carTypes>();
   const [currentImage, setCurrentImage] = useState<imgType>();
   const [imgs, setImgs] = useState<imgType[]>([]);
-
-  const [isLoading, setIsLoading] = useState(false);
-
-  const id = route.query.detais;
 
   const redirect = () => {
     route.push("/");
@@ -66,41 +66,28 @@ const Details = () => {
       );
     });
   };
+
   useEffect(() => {
-    const loaderCars = async () => {
-      setIsLoading(true);
-
-      if (!id) {
-        setIsLoading(false);
-        return;
+    if (selectedCar) {
+      let img;
+      if (selectedCar.imgs.length > 1) {
+        img = selectedCar.imgs[1];
+      } else {
+        img = selectedCar.imgs[0];
       }
-      const request = await fetchCar(+id);
+      setCurrentImage(img);
+      setImgs(selectedCar.imgs);
+      setItemDetais(selectedCar);
+    }
+  }, [selectedCar]);
 
-      if (request) {
-        let img;
-        if (request.imgs.length > 1) {
-          img = request.imgs[1];
-        } else {
-          img = request.imgs[0];
-        }
-        setCurrentImage(img);
-        setImgs(request.imgs);
-        setItemDetais(request);
-      }
-
-      setIsLoading(false);
-    };
-    loaderCars();
-  }, [id]);
-  if (isLoading) {
+  if (!selectedCar) {
     return <Loader />;
   }
 
   return (
     <Layout>
-      {!id || !itemDetais ? (
-        <Title type="notFound">Unable to load car details</Title>
-      ) : (
+      {itemDetais && (
         <Container type="details">
           <Container type="logo">
             <img src={itemDetais?.logo} alt="logo" />
@@ -154,5 +141,32 @@ const Details = () => {
     </Layout>
   );
 };
+
+export async function getStaticProps(context: any) {
+  const { params } = context;
+  const carId = params.id;
+  const selectedCar = await fetchCar(carId);
+
+  if (!selectedCar) {
+    return { notFound: true };
+  }
+
+  return {
+    props: {
+      selectedCar,
+    },
+  };
+}
+export async function getStaticPaths() {
+  const cars = await fetchCar();
+
+  const ids = cars.map((car: carType) => car.id);
+
+  const params = ids.map((id: number) => ({ params: { id: id } }));
+  return {
+    paths: params,
+    fallback: true,
+  };
+}
 
 export default Details;

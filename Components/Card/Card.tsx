@@ -13,7 +13,7 @@ const Card: FC<carTypes> = (props) => {
     setSelectedImg(idx);
   };
   const redirect = (id: number) => {
-    push(`${id}`);
+    push(`details/${id}`);
   };
   return (
     <CardStyles>
