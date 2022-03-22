@@ -4,6 +4,7 @@ import { Container, Title } from "..";
 import { CardStyles } from "./CardStyles";
 
 import { carTypes } from "@helpers/index";
+import Image from "next/image";
 
 const Card: FC<carTypes> = (props) => {
   const [selectedImg, setSelectedImg] = useState(0);
@@ -33,12 +34,15 @@ const Card: FC<carTypes> = (props) => {
         </Title>
 
         <Container type="cardImage">
-          {
-            <img
+          <div>
+            <Image
               src={props.imgs[selectedImg].img}
               alt={props.imgs[selectedImg].label}
+              width={100}
+              height={40}
+              layout="responsive"
             />
-          }
+          </div>
         </Container>
         <Title type="cardPrice">
           <span>$</span>

@@ -13,6 +13,7 @@ import { carTypes, fetchCar, imgType } from "@helpers/index";
 import { BsArrowRight, BsArrowLeft } from "react-icons/bs";
 import { toast } from "react-toastify";
 import { carType } from "@helpers/types/carType";
+import Image from "next/image";
 
 const Details = (props: { selectedCar: carType }) => {
   const route = useRouter();
@@ -108,7 +109,15 @@ const Details = (props: { selectedCar: carType }) => {
               </Button>
             </Container>
             <Container type="imgShowCart">
-              <img src={currentImage?.img} alt={currentImage?.label} />
+              <div>
+                <Image
+                  src={currentImage?.img || ""}
+                  alt={currentImage?.label}
+                  width={40}
+                  height={15}
+                  layout="responsive"
+                />
+              </div>
               <Button typeStyle="carousel">
                 Book now <BsArrowRight />
               </Button>

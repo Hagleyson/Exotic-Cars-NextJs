@@ -1,4 +1,4 @@
-import { theme } from "@globalStyle/theme";
+import { theme } from "globalStyle/theme";
 import styled from "styled-components";
 
 type propsType = {
@@ -19,6 +19,16 @@ export const TitleStyle = styled.h1`
         font-size: 21px;
         color:${theme.darkGrey}       
        }   
+       @media screen and (max-width: 458px) {
+        font-size: 25px;
+        }
+        @media screen and (max-width: 458px) {
+         font-size: 22px;
+         span{
+          font-size: 18px;
+         } 
+        }
+       
     `}
   ${(props: propsType) =>
     props.type === "headerSecondary" &&
@@ -107,6 +117,12 @@ export const TitleStyle = styled.h1`
           font-size:25px; 
           >p{
             font-size:20px; 
+          }
+        }
+        @media screen and (max-width: 384px){            
+          font-size:20px; 
+          >p{
+            font-size:17px; 
           }
         }
         

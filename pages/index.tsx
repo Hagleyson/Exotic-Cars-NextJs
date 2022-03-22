@@ -25,7 +25,7 @@ const Home = (props: propsType) => {
   }, []);
 
   return (
-    <Layout type="home">
+    <Layout>
       {isLoading && <Loader />}
       {!isLoading && cars.length < 1 && (
         <Title type="notFound">Could not load the cars</Title>

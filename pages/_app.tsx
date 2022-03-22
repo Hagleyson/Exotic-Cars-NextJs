@@ -1,5 +1,5 @@
 import type { AppProps } from "next/app";
-import { GlobalStyle } from "@globalStyle/GloabalStyle";
+import { GlobalStyle } from "globalStyle/GloabalStyle";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 

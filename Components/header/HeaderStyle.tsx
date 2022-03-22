@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { theme } from "@globalStyle/index";
+import { theme } from "globalStyle/index";
 
 export const HeaderStyle = styled.header`
   width: 100%;
@@ -20,5 +20,8 @@ export const HeaderStyle = styled.header`
   }
   @media screen and (max-width: 583px) {
     padding: 20px 40px;
+  }
+  @media screen and (max-width: 458px) {
+    padding: 20px 10px;
   }
 `;

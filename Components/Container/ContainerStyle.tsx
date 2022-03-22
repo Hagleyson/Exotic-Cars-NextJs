@@ -1,4 +1,4 @@
-import { theme } from "@globalStyle/theme";
+import { theme } from "globalStyle/theme";
 import styled from "styled-components";
 type propsType = {
   type?: string;
@@ -52,17 +52,31 @@ export const ContainerStyle = styled.div`
         position:relative;         
         display:flex;
         justify-content: center;                       
-        img{
-            max-width: 70%;            
-            position:absolute;            
-        }
-            
+        align-items: center;
+        > div{
+            width: 300px;  
+            max-width: 300px;    
+            height:100px;
+            max-height:100px;                                                 
+        }           
+        @media screen and (max-width: 827px) {
+            > div{
+                width: 400px;  
+                max-width: 400px;    
+                height:200px;
+                max-height:200px;                            
+            } 
+        } 
         @media screen and (max-width: 612px){
-            img{                
-                max-width:90%;
-            }
+            > div{
+                width: 400px;  
+                max-width: 400px;    
+                height:200px;
+                max-height:100px;                            
+            } 
         }
     `}
+    
   ${(props: propsType) =>
     props.type === "ball" &&
     `
@@ -123,6 +137,11 @@ export const ContainerStyle = styled.div`
         @media screen and (max-width: 680px){
             left: 10px;
         }  
+        @media screen and (max-width: 384px){            
+            >img{          
+              height: 60px;
+            }
+        }
         
     `}
 
@@ -134,7 +153,10 @@ export const ContainerStyle = styled.div`
         right: 80px;  
         @media screen and (max-width: 680px){
             right: 10px;
-        }              
+        }   
+        @media screen and (max-width: 384px){            
+            top:150px;
+        }           
     `}
     
     ${(props: propsType) =>
@@ -173,22 +195,42 @@ export const ContainerStyle = styled.div`
         justify-content: center;                        
         flex-direction: column;        
         padding:40px;        
-        >img{
-            width: 50%;
-            height: 70%;                        
+        >div{
+            width: 50%;            
+            height: 70%;
         }    
         >button{
             position:absolute;
             bottom:10px;
         }
-        @media screen and (max-width: 680px){
-            
-          >img{
-            width: 80%;
-            
-          margin-left:20px;
-          }
+        @media screen and (max-width: 1366px){
+            >div{
+                width: 40%;            
+                height: 80%;         
+                 
+            }  
+        } 
+        @media screen and (max-width: 1024px){
+            >div{
+                width: 60%;            
+                height: 60%;                
+            }  
         }  
+        @media screen and (max-width: 668px){           
+            >div{
+                width: 90%;                            
+                height: 70%;                
+            }  
+        }  
+        @media screen and (max-width: 446px){           
+            >div{
+                width: 95%;                            
+                height: 30%;                        
+            }  
+        }  
+        
+
+        
     `}
         
   ${(props: propsType) =>

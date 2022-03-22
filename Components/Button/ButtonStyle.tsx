@@ -1,4 +1,4 @@
-import { theme } from "@globalStyle/theme";
+import { theme } from "globalStyle/theme";
 import styled from "styled-components";
 
 type propsType = {
@@ -24,13 +24,20 @@ export const ButtonStyle = styled.button`
         background-color: ${theme.white};
         font-weight: bold;
         border-radius: 13px;
+        @media screen and (max-width: 458px) {
+          width: 64px;
+          height: 36px;
+          font-size:14px;
+        }
         ${
           props.secondary &&
           `
             border:3px solid ${theme.purple};
-            color:${theme.purple}    ;
+            color:${theme.purple};
         `
         }
+        
+        
     `}
   ${(props: propsType) =>
     props.typeStyle === "carousel" &&
@@ -59,7 +66,7 @@ export const ButtonStyle = styled.button`
           `
             background-color:${theme.white};
             color:${theme.darkGrey};
-            @media screen and (max-width: 500px){
+            @media screen and (max-width: 668px){
               width: 40px;
               span{
                 display:none;
