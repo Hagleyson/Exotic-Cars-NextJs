@@ -127,7 +127,7 @@
       "imgs": [
         {
           "id": "01",
-          "color": "Blue",
+          "color": "Silver",
           "img": "/image/mercedes-benz/01.png",
           "label": "Mercedes bens"
         }
@@ -142,15 +142,15 @@
       "imgs": [
         {
           "id": "02",
-          "color": "White",
+          "color": "Orange",
           "img": "/image/poshe911s/01.png",
           "label": "porshe"
         },
         {
           "id": "01",
-          "color": "Orange",
+          "color": "Silver",
           "img": "/image/poshe911s/02.png",
-          "label": "Mercedes bens"
+          "label": "Poshe"
         }
       ]
     },
@@ -192,7 +192,7 @@
       "logo": "/image/nissanSkyline/logo.png",
       "imgs": [
         {
-          "id": "02",
+          "id": "01",
           "color": "Black",
           "img": "/image/nissanSkyline/01.png",
           "label": "nissan skyline gtr r34"
@@ -208,9 +208,9 @@
       "imgs": [
         {
           "id": "02",
-          "color": "White",
+          "color": "Yellow",
           "img": "/image/porshe911gt3/01.png",
-          "label": "Mercedes bens"
+          "label": "Poshe"
         }
       ]
     }

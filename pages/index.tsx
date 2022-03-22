@@ -2,29 +2,35 @@ import { Card, Container, Layout, Loader, Title } from "@Components/index";
 import { useEffect, useState } from "react";
 import { fetchCar } from "@helpers/index";
 import { IoIosArrowUp } from "react-icons/io";
+import { carType } from "@helpers/types/carType";
+import { toast } from "react-toastify";
 
-const Home = () => {
-  const [isLoading, setIsLoading] = useState(false);
-  const [cars, setCars] = useState([]);
+type propsType = {
+  cars: carType[];
+  loading: boolean;
+  erro: any;
+};
+
+const Home = (props: propsType) => {
+  const { cars, loading, erro } = props;
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const loaderCars = async () => {
-      setIsLoading(true);
-      const request = await fetchCar();
-      if (request) {
-        setCars(request);
-      }
-      setIsLoading(false);
-    };
-    loaderCars();
+    setIsLoading(loading);
+  }, [loading]);
+  useEffect(() => {
+    if (erro.hasError) {
+      toast.error(erro.msg);
+    }
   }, []);
 
   return (
     <Layout type="home">
       {isLoading && <Loader />}
-      {!isLoading && cars.length < 1 ? (
+      {!isLoading && cars.length < 1 && (
         <Title type="notFound">Could not load the cars</Title>
-      ) : (
+      )}
+      {cars.length > 0 && (
         <Container type="home">
           {cars.map(({ id, name, model, price, imgs, logo }) => (
             <Card
@@ -46,5 +52,16 @@ const Home = () => {
     </Layout>
   );
 };
-
+export async function getStaticProps() {
+  const listCar = await fetchCar();
+  return {
+    props: {
+      cars: listCar.length > 0 ? listCar : [],
+      loading: false,
+      erro:
+        listCar && listCar.hasError ? listCar : { hasError: false, msg: null },
+    },
+    revalidate: 10,
+  };
+}
 export default Home;

@@ -1,6 +1,5 @@
 import { carType } from "./../../helpers/types/carType";
 import fs from "fs/promises";
-import { carTypes } from "@helpers/index";
 import path from "path";
 
 export default async function getCars(req: any, res: any) {
