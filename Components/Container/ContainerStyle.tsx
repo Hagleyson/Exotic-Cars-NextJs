@@ -278,9 +278,26 @@ export const ContainerStyle = styled.div`
         justify-content: center;       
         align-items: center;           
         flex-direction: column;
+        text-align: center;
+        >div{
+            width: 50%;
+            height:auto;            
+        }
         >button{
             margin-top:20px;
         }      
+        @media screen and (max-width:795px) {
+            >div{
+                width: 70%;
+                
+            }         
+        }
+        @media screen and (max-width:502px) {
+            >div{
+                width: 90%;
+                
+            }         
+        }
            
      `};
 `;
