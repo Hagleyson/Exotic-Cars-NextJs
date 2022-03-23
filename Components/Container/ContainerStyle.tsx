@@ -134,7 +134,7 @@ export const ContainerStyle = styled.div`
               height: 80px;
             }
         }
-        @media screen and (max-width: 680px){
+        @media screen and (max-width: 800px){
             left: 10px;
         }  
         @media screen and (max-width: 384px){            
@@ -151,7 +151,7 @@ export const ContainerStyle = styled.div`
         position:absolute;        
         top:120px;
         right: 80px;  
-        @media screen and (max-width: 680px){
+        @media screen and (max-width: 800px){
             right: 10px;
         }   
         @media screen and (max-width: 384px){            
@@ -180,7 +180,7 @@ export const ContainerStyle = styled.div`
                 top:calc(50%);        
              } 
         }  
-        @media screen and (max-width: 680px){
+        @media screen and (max-width: 800px){
             >div:first-child{                                    
                 padding-left:0px;   
              } 
@@ -246,7 +246,9 @@ export const ContainerStyle = styled.div`
             height:25%;  
             max-height:25%;          
         }   
-        
+        @media screen and (max-width: 389px){
+            flex-direction: column;                     
+        } 
      `};
 
   ${(props: propsType) =>

@@ -15,6 +15,29 @@ export const ContentCarouselStyle = styled.div`
   > div {
     width: 100%;
     height: 80%;
+    > div {
+      width: 120%;
+      height: 100%;
+    }
+  }
+  @media screen and (max-width: 668px) {
+    > div {
+      > div {
+        width: 125%;
+        padding-top: 10px;
+        height: 100%;
+      }
+    }
+  }
+  @media screen and (max-width: 668px) {
+    height: 60px;
+    > div {
+      max-height: 60px;
+      > div {
+        width: 125%;
+        height: 10%;
+      }
+    }
   }
   ${(props: propsType) =>
     props.selected &&
@@ -27,9 +50,4 @@ export const ContentCarouselStyle = styled.div`
         height:100% ;  
       } 
     `}
-
-  img {
-    width: 120%;
-    height: 100%;
-  }
 `;
