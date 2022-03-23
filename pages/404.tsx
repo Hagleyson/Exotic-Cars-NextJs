@@ -1,9 +1,8 @@
 import { Container, Title } from "@Components/index";
-import { useRouter } from "next/router";
 import Link from "next/link";
 import Image from "next/image";
+
 const NotFound = () => {
-  const route = useRouter();
   return (
     <Container type="notFound">
       <Title>Looks like you got lost</Title>
